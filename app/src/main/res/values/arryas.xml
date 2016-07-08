@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="industry">
+        <item>行业分类</item>
+        <item>建筑建材</item>
+        <item>冶金矿产</item>
+        <item>石油化工</item>
+        <item>水利水电</item>
+        <item>交通运输</item>
+        <item>信息产业</item>
+        <item>机械机电</item>
+        <item>轻工食品</item>
+    </array>
+    <array name="analyze">
+        <item>需求分类</item>
+        <item>融资</item>
+        <item>渠道</item>
+        <item>吸纳人才</item>
+        <item>招商</item>
+    </array>
+</resources>

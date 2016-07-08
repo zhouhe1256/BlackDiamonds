@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/project_bg"
+    tools:context="com.ljs.blackdiamonds.MainActivity">
+    <include
+        layout="@layout/blackdiamond_title"
+        android:id="@+id/include" />
+    <!-- 内容部分， fragment切换 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/teb_menu_height"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/db_bg_s"
+        android:id="@+id/relativeLayout2">
+
+       <!-- <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/viewline" />-->
+        <ImageView
+            android:id="@+id/project_image"
+            android:layout_width="@dimen/teb_menu_button_withofheight"
+            android:layout_height="@dimen/teb_menu_button_withofheight"
+            android:src="@drawable/project_t"
+            android:layout_marginLeft="40dp"
+            android:layout_centerVertical="true"
+            android:onClick="onClick"
+            />
+        <ImageView
+            android:id="@+id/action_image"
+            android:layout_width="@dimen/teb_menu_button_withofheight"
+            android:layout_height="@dimen/teb_menu_button_withofheight"
+            android:src="@drawable/action"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClick"
+            />
+        <ImageView
+            android:id="@+id/quanz_image"
+            android:layout_width="@dimen/teb_menu_button_withofheight"
+            android:layout_height="@dimen/teb_menu_button_withofheight"
+            android:src="@drawable/quanz"
+            android:layout_marginRight="40dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:onClick="onClick"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@id/relativeLayout2"
+        android:layout_marginTop="@dimen/title_height"
+       >
+    </LinearLayout>
+
+</RelativeLayout>

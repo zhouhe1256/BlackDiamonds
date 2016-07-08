@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="@drawable/project_item_shap"
+    android:padding="@dimen/image_padding"
+    android:layout_marginTop="5dp"
+    >
+<ImageView
+    android:id="@+id/project_item_image"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:src="@drawable/yizhe"
+    android:scaleType="fitXY"
+    />
+    <ImageView
+        android:id="@+id/project_item_tag"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/financing"
+        android:layout_marginLeft="10dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:background="#000000"
+        android:alpha="0.8"
+        >
+        <TextView
+            android:id="@+id/project_item_describe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="医者仁心 缔造美"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="10dp"
+            />
+         <RelativeLayout
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:layout_alignParentRight="true"
+             android:layout_marginRight="10dp"
+             >
+             <ImageView
+                 android:id="@+id/zan"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:src="@drawable/dianzan"
+                 android:layout_marginRight="2dp"
+                 />
+                <TextView
+                    android:id="@+id/project_item_num"
+                    android:layout_toRightOf="@+id/zan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:layout_centerVertical="true"
+                    android:text="2000"
+                    />
+         </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="#000000"
+        android:alpha="0.7"
+        android:visibility="gone"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我要报名"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            />
+    </RelativeLayout>
+</RelativeLayout>
+</RelativeLayout>

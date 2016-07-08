@@ -1,0 +1,28 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="shadow_width">15dp</dimen>
+    <dimen name="slidingmenu_offset">80dp</dimen>
+    <dimen name="search_button_right">5dp</dimen>
+    <dimen name="search_editext_right">10dp</dimen>
+    <dimen name="search_editext_left">10dp</dimen>
+    <dimen name="search_hot_size">12sp</dimen>
+    <dimen name="search_hot_left">10dp</dimen>
+    <dimen name="search_hot_padding_leftofright">10dp</dimen>
+    <dimen name="search_hot_padding_topofbutton">2dp</dimen>
+    <dimen name="comment_text_headtoleft">5dp</dimen>
+    <dimen name="teb_menu_height">60dp</dimen>
+    <dimen name="teb_menu_button_withofheight">40dp</dimen>
+    <dimen name="title_height">45dp</dimen>
+    <dimen name="spinner_height">40dp</dimen>
+    <dimen name="spinner_text">18sp</dimen>
+    <dimen name="user_text">17sp</dimen>
+    <dimen name="user_text_padding">10dp</dimen>
+    <dimen name="image_padding">5dp</dimen>
+    <dimen name="action_info">5dp</dimen>
+    <dimen name="action_info_content">15dp</dimen>
+    <dimen name="listview_rightofheight">5dp</dimen>
+    <dimen name="user_info_top">45dp</dimen>
+</resources>

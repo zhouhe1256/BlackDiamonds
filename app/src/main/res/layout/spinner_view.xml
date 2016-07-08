@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:id="@+id/spinner_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spinner_height"
+        android:text="132132"
+        android:textSize="@dimen/spinner_text"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:background="@color/project_bg"
+        />
+    <ListView
+        android:id="@+id/spinner_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+</LinearLayout>

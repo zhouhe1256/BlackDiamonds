@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/project_bg"
+    >
+    <include
+        layout="@layout/blackdiamond_title"
+        />
+    <com.xiaosu.pulllayout.PullLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pulllayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/listview_rightofheight"
+        android:layout_marginRight="@dimen/listview_rightofheight"
+        app:theme="@style/pull_style">
+    <com.ljs.view.MyListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.ljs.view.MyListView>
+    </com.xiaosu.pulllayout.PullLayout>
+</LinearLayout>
