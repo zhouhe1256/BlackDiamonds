@@ -84,4 +84,11 @@ public class LoginArrayModel {
                 .param("token",token)
                 .param("uid",uid).contentDecoder(decoder).isCache(true).run();
     }
+
+    public static IPromise UpdataUserInfoRequst(String type,String content){
+
+        return Http.instance().get(ApiUrl.USERINFO)
+                .param("type",type)
+                .param("content",content).contentDecoder(decoder).isCache(true).run();
+    }
 }

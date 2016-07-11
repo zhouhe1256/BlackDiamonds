@@ -9,6 +9,7 @@
         layout="@layout/blackdiamond_title"
         />
     <RelativeLayout
+        android:id="@+id/user_head"
         android:layout_width="match_parent"
         android:layout_height="@dimen/user_info_top">
         <TextView

@@ -13,6 +13,7 @@
     android:textColor="#ffffff"
     />
     <EditText
+        android:id="@+id/user_info"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginLeft="5dp"
@@ -22,11 +23,13 @@
         android:textCursorDrawable="@null"
         />
     <Button
+        android:id="@+id/info_affirm"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_shap"
         android:text="确认"
+        android:onClick="onClick"
         android:textColor="#ffffff"
         />
 </LinearLayout>
