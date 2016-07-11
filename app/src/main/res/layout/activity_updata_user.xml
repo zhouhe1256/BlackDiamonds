@@ -27,6 +27,39 @@
         android:textColor="#ffffff"
         android:textCursorDrawable="@null"
         />
+
+    <LinearLayout
+        android:id="@+id/user_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        >
+        <EditText
+            android:id="@+id/phone_code"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/editext_user_shap"
+            android:textColor="#ffffff"
+            android:layout_weight="4"
+            android:textCursorDrawable="@null"
+            />
+        <Button
+            android:id="@+id/iphone_button"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/button_shap"
+            android:text="获取验证码"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:textColor="#ffffff"
+            />
+    </LinearLayout>
     <Button
         android:id="@+id/info_affirm"
         android:layout_width="match_parent"

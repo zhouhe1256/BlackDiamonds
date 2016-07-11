@@ -122,6 +122,10 @@ public class HApplication extends Application {
         Http.instance().param("token", token).option(HttpOption.X_Token, token);
     }
 
+    public static File getBaseDir() {
+        return baseDir;
+    }
+
     public static boolean isLogin(){
         String token = PreferencesUtils.getString(hApplication, "token");
 //        Log.i("tosss",token);

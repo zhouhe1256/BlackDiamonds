@@ -91,4 +91,18 @@ public class LoginArrayModel {
                 .param("type",type)
                 .param("content",content).contentDecoder(decoder).isCache(true).run();
     }
+
+    public static IPromise setAvatar(String type,byte[] content){
+
+        return Http.instance().get(ApiUrl.UPDATAUSER)
+                .param("type",type)
+                .param("content",content).contentDecoder(decoder).isCache(true).run();
+    }
+
+    public static IPromise binPhone(String phoneNum,String vcode){
+
+        return Http.instance().get(ApiUrl.BIND_PHONE)
+                .param("phoneNum",phoneNum)
+                .param("vcode",vcode).contentDecoder(decoder).isCache(true).run();
+    }
 }

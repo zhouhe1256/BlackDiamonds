@@ -20,9 +20,11 @@
     <dimen name="spinner_text">18sp</dimen>
     <dimen name="user_text">17sp</dimen>
     <dimen name="user_text_padding">10dp</dimen>
-    <dimen name="image_padding">5dp</dimen>
+    <dimen name="image_padding">3dp</dimen>
     <dimen name="action_info">5dp</dimen>
     <dimen name="action_info_content">15dp</dimen>
     <dimen name="listview_rightofheight">5dp</dimen>
     <dimen name="user_info_top">45dp</dimen>
+    <dimen name="user_textSize">16sp</dimen>
+    <dimen name="address_item_height">30dp</dimen>
 </resources>

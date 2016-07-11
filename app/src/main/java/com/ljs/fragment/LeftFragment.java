@@ -22,6 +22,7 @@ import com.ljs.model.LoginArrayModel;
 import com.ljs.singleton.UserInfo;
 import com.ljs.util.ItemViewFactory;
 import com.ljs.util.PreferencesUtils;
+import com.ljs.util.ToastUtil;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -93,14 +94,21 @@ public class LeftFragment extends Fragment {
             @Override
             public void call(Arguments arguments) {
                 loginArrayModel = arguments.get(0);
-                UserInfo.getInstance().setUserInfo(loginArrayModel);
-                userNametTextView.setText(loginArrayModel.getData().getName());
-                ImageViewAdapter.adapt(headImageView,loginArrayModel.getData().getIcon(),R.drawable.head,true);
+                if(loginArrayModel.getRescode()==100){
+                    UserInfo.getInstance().setUserInfo(loginArrayModel);
+                    userNametTextView.setText(loginArrayModel.getData().getName());
+                    ImageViewAdapter.adapt(headImageView,loginArrayModel.getData().getIcon(),R.drawable.head,true);
+                }else{
+                    ToastUtil.toast(getActivity(),loginArrayModel.getMsg());
+                    PreferencesUtils.clearData(getActivity());
+                    HApplication.getInstance().updateApiToken();
+                }
+
             }
         }).fail(new ICallback() {
             @Override
             public void call(Arguments arguments) {
-
+                ToastUtil.toast(getActivity(),getString(R.string.user_err));
             }
         });
     }

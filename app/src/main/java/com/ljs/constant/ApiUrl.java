@@ -22,5 +22,6 @@ public class ApiUrl {
     public static final String USERINFO = "/app/user/getUser";//获取用户信息
     public static final String UPDATAUSER = "/app/user/updateUser";//用户信息修改
     public static final String BIND_PHONE = "/app/user/bindPhone";//绑定手机号
+    public static final String ADDRESS_ALL = "/app/user/getAddresses";//用户获取所有地址
 
 }

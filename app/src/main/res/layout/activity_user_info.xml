@@ -10,6 +10,7 @@
         />
     <RelativeLayout
         android:id="@+id/user_head"
+        android:onClick="onClick"
         android:layout_width="match_parent"
         android:layout_height="@dimen/user_info_top">
         <TextView
@@ -166,8 +167,11 @@
             />
     </RelativeLayout>
     <RelativeLayout
+        android:id="@+id/user_info_phone"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/user_info_top">
+        android:layout_height="@dimen/user_info_top"
+        android:onClick="onClick"
+        >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -203,6 +207,8 @@
             />
     </RelativeLayout>
     <RelativeLayout
+        android:id="@+id/address"
+        android:onClick="onClick"
         android:layout_width="match_parent"
         android:layout_height="@dimen/user_info_top">
         <TextView
