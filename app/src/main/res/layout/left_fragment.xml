@@ -48,6 +48,7 @@
         android:paddingTop="@dimen/user_text_padding"
         android:paddingBottom="@dimen/user_text_padding"
         android:textSize="@dimen/user_text"
+        android:onClick="onClick"
         android:text="用户信息"
         android:textColor="#ffffff"
         />

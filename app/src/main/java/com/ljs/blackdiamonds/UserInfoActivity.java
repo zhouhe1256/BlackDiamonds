@@ -1,6 +1,7 @@
 package com.ljs.blackdiamonds;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -49,7 +50,7 @@ public class UserInfoActivity extends Activity{
             companyName.setText(loginArrayModel.getData().getCompanyName());
             if(loginArrayModel.getData().getPhoneNum()!=null||
                     loginArrayModel.getData().getPhoneNum().equals("")){
-                phoneNum.setText(loginArrayModel.getData().getCompanyTitle());
+                phoneNum.setText(loginArrayModel.getData().getPhoneNum());
             }
         }
     }
@@ -70,10 +71,28 @@ public class UserInfoActivity extends Activity{
     }
 
     public void onClick(View v){
+        Intent intent = new Intent();
         switch (v.getId()){
             case R.id.back_user:
                 PreferencesUtils.clearData(this);
                 finish();
+                break;
+            case R.id.user_head:
+                break;
+            case R.id.user_info_name:
+                intent.setClass(this,UpdataUserActivity.class);
+                intent.putExtra("type","1");
+                startActivity(intent);
+                break;
+            case R.id.user_info_gsname:
+                intent.setClass(this,UpdataUserActivity.class);
+                intent.putExtra("type","2");
+                startActivity(intent);
+                break;
+            case R.id.user_info_pjname:
+                intent.setClass(this,UpdataUserActivity.class);
+                intent.putExtra("type","3");
+                startActivity(intent);
                 break;
         }
     }
@@ -87,5 +106,9 @@ public class UserInfoActivity extends Activity{
         });
     }
 
-
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        initData();
+    }
 }

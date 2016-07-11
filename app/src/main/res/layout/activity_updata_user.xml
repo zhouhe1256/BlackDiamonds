@@ -5,7 +5,12 @@
     android:orientation="vertical"
     android:background="@color/project_bg"
     >
+   <include
+       layout="@layout/blackdiamond_title"
+       />
+
 <TextView
+    android:id="@+id/up_name"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:padding="10dp"

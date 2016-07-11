@@ -47,8 +47,10 @@ public class LeftFragment extends Fragment {
     private void initData() {
         if(UserInfo.getInstance().getUserInfo()!=null){
             loginArrayModel = UserInfo.getInstance().getUserInfo();
-            userNametTextView.setText(loginArrayModel.getData().getName());
-            ImageViewAdapter.adapt(headImageView,loginArrayModel.getData().getIcon(),R.drawable.head,true);
+            if(loginArrayModel.getData()!=null){
+                userNametTextView.setText(loginArrayModel.getData().getName());
+                ImageViewAdapter.adapt(headImageView,loginArrayModel.getData().getIcon(),R.drawable.head,true);
+            }
         }else{
             getUserInfo();
         }

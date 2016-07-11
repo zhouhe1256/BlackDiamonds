@@ -87,7 +87,7 @@ public class LoginArrayModel {
 
     public static IPromise UpdataUserInfoRequst(String type,String content){
 
-        return Http.instance().get(ApiUrl.USERINFO)
+        return Http.instance().get(ApiUrl.UPDATAUSER)
                 .param("type",type)
                 .param("content",content).contentDecoder(decoder).isCache(true).run();
     }
