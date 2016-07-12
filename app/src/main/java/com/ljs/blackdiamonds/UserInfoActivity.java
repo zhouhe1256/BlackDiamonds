@@ -26,10 +26,20 @@ import com.ljs.util.PreferencesUtils;
 import com.ljs.util.ToastUtil;
 import com.ljs.view.MyListView;
 import com.ljs.view.SelectPicPopupWindow;
+import com.qiniu.android.http.ResponseInfo;
+import com.qiniu.android.storage.UpCompletionHandler;
+import com.qiniu.android.storage.UploadManager;
+import com.qiniu.android.utils.UrlSafeBase64;
+
+import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
+
+import javax.crypto.Mac;
+import javax.crypto.SecretKey;
+import javax.crypto.spec.SecretKeySpec;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -50,6 +60,8 @@ public class UserInfoActivity extends Activity implements SelectPicPopupWindow.S
     private int selectCode = 1;
     private int requestCropIcon = 2;
     private int resultPictureCode = 3;
+    private static final String MAC_NAME = "HmacSHA1";
+    private static final String ENCODING = "UTF-8";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,6 +107,7 @@ public class UserInfoActivity extends Activity implements SelectPicPopupWindow.S
         switch (v.getId()){
             case R.id.back_user:
                 PreferencesUtils.clearData(this);
+                HApplication.getInstance().updateApiToken();
                 finish();
                 break;
             case R.id.user_head:
@@ -181,7 +194,7 @@ public class UserInfoActivity extends Activity implements SelectPicPopupWindow.S
                     ByteArrayOutputStream stream = new ByteArrayOutputStream();
                     photo.compress(Bitmap.CompressFormat.JPEG, 75, stream);
                     headImageView.setImageBitmap(photo);
-                    LoginArrayModel.setAvatar("0",FileUtils.Bitmap2Bytes(ImageUtil.comp(photo))).done(new ICallback() {
+                    LoginArrayModel.setAvatar(FileUtils.Bitmap2Bytes(ImageUtil.comp(photo))).done(new ICallback() {
                         @Override
                         public void call(Arguments arguments) {
                              loginArrayModel = arguments.get(0);
@@ -208,8 +221,7 @@ public class UserInfoActivity extends Activity implements SelectPicPopupWindow.S
                 ByteArrayOutputStream stream = new ByteArrayOutputStream();
                 photo.compress(Bitmap.CompressFormat.JPEG, 75, stream);
 
-                Log.i("photos",photo.toString());
-                LoginArrayModel.setAvatar("0",FileUtils.Bitmap2Bytes(ImageUtil.comp(photo))).done(new ICallback() {
+                LoginArrayModel.setAvatar(FileUtils.Bitmap2Bytes(ImageUtil.comp(photo))).done(new ICallback() {
                     @Override
                     public void call(Arguments arguments) {
                         loginArrayModel = arguments.get(0);
@@ -246,4 +258,7 @@ public class UserInfoActivity extends Activity implements SelectPicPopupWindow.S
         intent.setAction(MediaStore.ACTION_IMAGE_CAPTURE);
         startActivityForResult(intent, resultPictureCode);
     }
+
+
+
 }

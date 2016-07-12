@@ -92,11 +92,10 @@ public class LoginArrayModel {
                 .param("content",content).contentDecoder(decoder).isCache(true).run();
     }
 
-    public static IPromise setAvatar(String type,byte[] content){
+    public static IPromise setAvatar(byte[] content){
 
-        return Http.instance().get(ApiUrl.UPDATAUSER)
-                .param("type",type)
-                .param("content",content).contentDecoder(decoder).isCache(true).run();
+        return Http.instance().post(ApiUrl.UPDATAUSER)
+                .data(content).contentDecoder(decoder).isCache(true).run();
     }
 
     public static IPromise binPhone(String phoneNum,String vcode){

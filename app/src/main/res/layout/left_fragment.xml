@@ -25,7 +25,7 @@
         android:layout_toRightOf="@+id/head_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="黑钻石导演马强"
+        android:text=""
         android:layout_centerVertical="true"
         android:layout_marginLeft="5dp"
         android:textSize="18sp"

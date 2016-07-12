@@ -4,6 +4,7 @@ package com.ljs.model;
  * Created by zhouhe on 2016/7/6.
  */
 public class ProjectModel {
+    private boolean isLike;
     private String name;
     private String icon;
     private String pid;
@@ -68,4 +69,11 @@ public class ProjectModel {
         this.isNew = isNew;
     }
 
+    public boolean isLike() {
+        return isLike;
+    }
+
+    public void setLike(boolean like) {
+        isLike = like;
+    }
 }

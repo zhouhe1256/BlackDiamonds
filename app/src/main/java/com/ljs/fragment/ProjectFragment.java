@@ -314,4 +314,9 @@ public class ProjectFragment extends Fragment implements PullLayout.OnPullCallBa
         });
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        pullLayout.autoRefresh();
+    }
 }

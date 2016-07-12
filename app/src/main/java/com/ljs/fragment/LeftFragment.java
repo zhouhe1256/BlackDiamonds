@@ -23,6 +23,8 @@ import com.ljs.singleton.UserInfo;
 import com.ljs.util.ItemViewFactory;
 import com.ljs.util.PreferencesUtils;
 import com.ljs.util.ToastUtil;
+import com.qiniu.android.common.Zone;
+import com.qiniu.android.storage.Configuration;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -48,10 +50,9 @@ public class LeftFragment extends Fragment {
     private void initData() {
         if(UserInfo.getInstance().getUserInfo()!=null){
             loginArrayModel = UserInfo.getInstance().getUserInfo();
-            if(loginArrayModel.getData()!=null){
                 userNametTextView.setText(loginArrayModel.getData().getName());
                 ImageViewAdapter.adapt(headImageView,loginArrayModel.getData().getIcon(),R.drawable.head,true);
-            }
+
         }else{
             getUserInfo();
         }
@@ -76,6 +77,7 @@ public class LeftFragment extends Fragment {
         userInfoTextView = (TextView) view.findViewById(R.id.user_info);
         userNametTextView = (TextView) view.findViewById(R.id.user_name);
         headImageView = (CircleImageView) view.findViewById(R.id.head_image);
+
     }
 
     @Override
@@ -83,6 +85,8 @@ public class LeftFragment extends Fragment {
         super.onStart();
         if(HApplication.isLogin()){
             initData();
+        }else{
+            userNametTextView.setText("");
         }
 
     }
